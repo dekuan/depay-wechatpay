@@ -92,17 +92,16 @@ abstract class BaseAbstractGateway extends AbstractGateway
 
 
 
-    /**
-     * @param array $parameters
-     *
-     * @return \Omnipay\WechatPay\Message\CreateOrderRequest
-     */
-    public function purchase( array $parameters = array())
-    {
-        $parameters['trade_type'] = $this->getTradeType();
-
-        return $this->createRequest('\Omnipay\WechatPay\Message\CreateOrderRequest', $parameters);
-    }
+	/**
+	 *	@param array $arrParameters
+	 *
+	 *	@return \dekuan\depay\WechatPay\Message\CreateOrderRequest
+	 */
+	public function purchase( array $arrParameters = [] )
+	{
+		$parameters['trade_type'] = $this->getTradeType();
+		return $this->createRequest('\dekuan\depay\WechatPay\Message\CreateOrderRequest', $arrParameters );
+	}
 
 
     public function getTradeType()

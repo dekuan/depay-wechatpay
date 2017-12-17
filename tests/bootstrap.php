@@ -9,5 +9,3 @@ $loader = require __DIR__ . '/../vendor/autoload.php';
 $loader->addPsr4( 'dekuan\\depay\\', __DIR__ . '/../vendor/dekuan/depay/src/' );
 $loader->addPsr4( 'dekuan\\depay\\WechatPay\\', __DIR__ . '/../src/' );
 
-//var_dump( $loader->getClassMap(), __DIR__ );
-//exit();
